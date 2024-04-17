@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Championnat RW Limal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: gold;
+        background-color: black;
+        padding: 40px;
+        line-height: 1.618em;
+    }
+    h1 {
+        color: gold;
+        margin-bottom: 20px;
+        text-align: center; /* Centrer le titre */
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid gold;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #333;
+    }
+    tr:nth-child(even) {
+        background-color: #222;
+    }
+    nav {
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center; /* Centrer les liens dans la navigation */
+    }
+    nav a {
+        color: gold;
+        margin: 0 20px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="#contact">Acceuil</a>
+        <a href="#calendrier">Calendrier vétéran</a>
+        <a href="#sponsor">Sponsor</a>
+        <a href="#contact">Contact</a>
+    </nav>
+<h1>Planning Championnat RW Limal</h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Visité</th>
+        <th>Visiteur</th>
+        <th>Résultat</th>
+        <th>Remarques</th>
+    </tr>
+    <!-- Les données du tableau seront générées dynamiquement ici -->
+</table>
+<script>
+    // JavaScript pour ajouter les données dynamiquement
+    const matches = [
+    { date: "2024-08-30", time: "20h30", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2024-09-06", time: "20:30:00", home: "FERNELMONT", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-09-13", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2024-09-20", time: "20:30:00", home: "INCOURT", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-09-27", time: "20:30:00", home: "OHAIN", visitor: "WAVRE-LIMAL", result: "", remarks: "Coquerée" },
+    { date: "2024-10-04", time: "20:30:00", home: "ORP NODUWEZ", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-10-11", time: "20:30:00", home: "ROSIERES-RIXENSART", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-10-18", time: "20:30:00", home: "WAVRE-LIMAL", visitor: "BIERGES", result: "", remarks: "" },
+    { date: "2024-10-25", time: "20:30:00", home: "WAVRE-LIMAL", visitor: "WATERLOO", result: "", remarks: "" },
+    { date: "2024-11-01", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2024-11-08", time: "20:30:00", home: "LUCKY BOYS", visitor: "WAVRE-LIMAL", result: "", remarks: "Incourt" },
+    { date: "2024-11-15", time: "20:30:00", home: "WAVRE-LIMAL", visitor: "VILLERS-LA-VILLE", result: "", remarks: "" },
+    { date: "2024-11-22", time: "20:30:00", home: "HOUTAIN", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-11-29", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2024-12-06", time: "20:30:00", home: "VILLERS-LA-VILLE", visitor: "WAVRE-LIMAL", result: "", remarks: "" },
+    { date: "2024-12-13", time: "20:30:00", home: "WAVRE-LIMAL", visitor: "CHASTRE", result: "", remarks: "" },
+    { date: "2024-12-20", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2024-12-27", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+    { date: "2025-01-03", time: "20:30:00", home: "WAVRE-LIMAL", visitor: "OHAIN", result: "", remarks: "" },
+    { date: "2025-01-10", time: "20:30:00", home: "", visitor: "", result: "", remarks: "" },
+        // Plus de données ici
+    ];
+    const table = document.querySelector("table");
+    matches.forEach(match => {
+        const row = table.insertRow(-1);
+        row.insertCell(0).textContent = match.date;
+        row.insertCell(1).textContent = match.time;
+        row.insertCell(2).textContent = match.home;
+        row.insertCell(3).textContent = match.visitor;
+        row.insertCell(4).textContent = match.result;
+        row.insertCell(5).textContent = match.remarks;
+    });
+</script>
+</body>
+</html>
